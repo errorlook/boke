@@ -99,9 +99,4 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: particlex
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: 'git'
-  repo: https://github.com/errorlook/boke.git
-  branch: gh-pages
+# Deployment (docs 方案不需要此块，如需 gh-pages 再恢复)
