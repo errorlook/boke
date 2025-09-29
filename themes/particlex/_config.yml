@@ -36,10 +36,6 @@ menu:
         name: box-archive
         theme: solid
         link: /Knowledge Base
-    link:
-        name: bookmark
-        theme: solid
-        link: /link
     wallpaper:
         name: wallpaper
         theme: solid
