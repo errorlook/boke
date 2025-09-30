@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
-    <link rel="icon" href="/boke/images/avatar.jpg" />
+    <link rel="icon" href="/boke/images/1.jpg" />
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
 <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -149,14 +149,18 @@
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/9/28
+            2025/9/30
         </span>
         
         
     </div>
     
     <div class="content" v-pre>
-        
+        <h1 id="修改images图片的后缀"><a href="#修改images图片的后缀" class="headerlink" title="修改images图片的后缀"></a>修改images图片的后缀</h1><h2 id="Linux-macOS（终端执行）"><a href="#Linux-macOS（终端执行）" class="headerlink" title="Linux &#x2F; macOS（终端执行）"></a>Linux &#x2F; macOS（终端执行）</h2><p>在你的项目根目录执行：<br>cd source&#x2F;images</p>
+<h4 id="把所有需要修改开头的图片统一重命名为-xx-jpg"><a href="#把所有需要修改开头的图片统一重命名为-xx-jpg" class="headerlink" title="把所有需要修改开头的图片统一重命名为 xx.jpg"></a>把所有需要修改开头的图片统一重命名为 xx.jpg</h4><p>a&#x3D;1<br>for file in fulilian*; do<br>  ext&#x3D;”${file##*.}”          # 获取扩展名<br>  newname&#x3D;”fulilian${a}.jpg” # 新名字（统一成 .jpg）<br>  echo “重命名: $file -&gt; $newname”<br>  mv “$file” “$newname”<br>  a&#x3D;$((a+1))<br>done</p>
+<h2 id="Windows-PowerShell（终端执行）"><a href="#Windows-PowerShell（终端执行）" class="headerlink" title="Windows PowerShell（终端执行）"></a>Windows PowerShell（终端执行）</h2><p>cd source&#x2F;images</p>
+<p>$a &#x3D; 1<br>Get-ChildItem -Filter “fulilian*” | ForEach-Object {<br>    $newname &#x3D; “fulilian$a.jpg”<br>    Rename-Item $<em>.FullName $newname<br>    Write-Output “重命名: $($</em>.Name) -&gt; $newname”<br>    $a++<br>}</p>
+
     </div>
     
     
