@@ -6,7 +6,7 @@
 
 ## 基本信息
 
-- 姓名：strat
+- 姓名：zhangqi
 - 城市：深圳
 - 联系方式：邮箱 start.luck@qq.com ·  GitHub https://github.com/errorlook
 
