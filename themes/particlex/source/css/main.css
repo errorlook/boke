@@ -367,8 +367,8 @@
     margin-right: calc(100% - 100vw);
 }
 #menu {
-    background: #92cafa;
-    box-shadow: 0 -1px 10px 0 #9e9e9e4d;
+    background: transparent !important;   /* 背景透明 */
+    box-shadow: none !important;          /* 去掉阴影 */
     font-weight: bold;
     line-height: 50px;
     position: fixed;
@@ -381,13 +381,13 @@
     height: 50px;
 }
 #menu #desktop-menu .title {
-    color: #555;
+    color: #fff;
     display: inline-block;
     margin-left: 60px;
     margin-right: 5px;
 }
 #menu #desktop-menu a {
-    color: #555;
+    color: #fff;
     display: inline-block;
     margin-left: 30px;
 }
@@ -407,10 +407,10 @@
     width: 80%;
 }
 #menu #mobile-menu .items a {
-    color: #555;
+    color: #fff;
 }
 #menu #mobile-menu .title {
-    color: #555;
+    color: #fff;
     cursor: pointer;
     z-index: 1003;
 }
@@ -972,4 +972,31 @@ ol li {
     ol {
         padding-left: 20px;
     }
+}
+body,
+#home-head,
+#home-background {
+    background: url('/boke/images/fulilian52.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* 保持首页卡片半透明可读 */
+#home-posts-wrap {
+    background: rgba(250, 246, 246, 0.8);
+}
+
+/* 隐藏主题自带遮罩层，避免覆盖背景 */
+#home-background::before,
+#home-background::after {
+    content: none;
+    background: transparent;
+}
+
+/* 页面内容半透明背景 */
+.article,
+#archives,
+#home-posts-wrap {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 20px;
 }

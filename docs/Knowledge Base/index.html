@@ -3,7 +3,7 @@
 <html lang="English">
 <head>
     <meta charset="utf-8" />
-    <title> | 我的小屋</title>
+    <title>学习笔记 | start.luck</title>
     <meta name="author" content="zhangqi" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -44,6 +44,8 @@
 
 
 
+<script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
+
 
 
 <link rel="stylesheet" href="/boke/css/main.css" />
@@ -63,7 +65,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/boke/">
-            <span>我的小屋</span>
+            <span>START.LUCK</span>
         </a>
         
         <a href="/boke/">
@@ -82,7 +84,7 @@
         </a>
         
         <a href="/boke/wallpaper">
-            <i class="fa-solid fa-wallpaper fa-fw"></i>
+            <i class="fa-solid fa-image fa-fw"></i>
             <span>&ensp;wallpaper</span>
         </a>
         
@@ -90,7 +92,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;我的小屋</span>
+            <span>&emsp;START.LUCK</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -125,7 +127,7 @@
                 <a href="/boke/wallpaper">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-wallpaper fa-fw"></i>
+                            <i class="fa-solid fa-image fa-fw"></i>
                         </div>
                         <div style="min-width: 100px; max-width: 150%; width: 20%">wallpaper</div>
                     </div>
@@ -142,24 +144,102 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1></h1>
+        <h1>学习笔记</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/9/30
+            2025/10/1
         </span>
         
         
     </div>
     
     <div class="content" v-pre>
-        <h1 id="修改images图片的后缀"><a href="#修改images图片的后缀" class="headerlink" title="修改images图片的后缀"></a>修改images图片的后缀</h1><h2 id="Linux-macOS（终端执行）"><a href="#Linux-macOS（终端执行）" class="headerlink" title="Linux &#x2F; macOS（终端执行）"></a>Linux &#x2F; macOS（终端执行）</h2><p>在你的项目根目录执行：<br>cd source&#x2F;images</p>
-<h4 id="把所有需要修改开头的图片统一重命名为-xx-jpg"><a href="#把所有需要修改开头的图片统一重命名为-xx-jpg" class="headerlink" title="把所有需要修改开头的图片统一重命名为 xx.jpg"></a>把所有需要修改开头的图片统一重命名为 xx.jpg</h4><p>a&#x3D;1<br>for file in fulilian*; do<br>  ext&#x3D;”${file##*.}”          # 获取扩展名<br>  newname&#x3D;”fulilian${a}.jpg” # 新名字（统一成 .jpg）<br>  echo “重命名: $file -&gt; $newname”<br>  mv “$file” “$newname”<br>  a&#x3D;$((a+1))<br>done</p>
-<h2 id="Windows-PowerShell（终端执行）"><a href="#Windows-PowerShell（终端执行）" class="headerlink" title="Windows PowerShell（终端执行）"></a>Windows PowerShell（终端执行）</h2><p>cd source&#x2F;images</p>
-<p>$a &#x3D; 1<br>Get-ChildItem -Filter “fulilian*” | ForEach-Object {<br>    $newname &#x3D; “fulilian$a.jpg”<br>    Rename-Item $<em>.FullName $newname<br>    Write-Output “重命名: $($</em>.Name) -&gt; $newname”<br>    $a++<br>}</p>
+        <h1 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h1><h2 id="Vue-知识点"><a href="#Vue-知识点" class="headerlink" title="Vue 知识点"></a>Vue 知识点</h2><details>
+<summary>Vue 响应式原理</summary>
+
+<ul>
+<li>Vue 通过 <code>Object.defineProperty</code> &#x2F; <code>Proxy</code> 实现响应式</li>
+<li>数据变化会自动更新视图</li>
+<li>响应式包括<strong>getter</strong> 和 <strong>setter</strong> 拦截，对依赖进行收集和触发更新</li>
+<li>Vue 3 使用 Proxy，更加高效并能监听数组和对象新增属性</li>
+</ul>
+</details>
+
+<details>
+<summary>Vue 组件通信</summary>
+
+<ul>
+<li>父子组件：props 传值，$emit 触发事件</li>
+<li>兄弟组件：EventBus（事件总线） &#x2F; Pinia &#x2F; Vuex 状态管理</li>
+<li>跨级通信：provide &#x2F; inject 或全局状态管理</li>
+</ul>
+</details>
+
+<details>
+<summary>Vue 生命周期顺序</summary>
+
+<ul>
+<li><strong>beforeCreate</strong>：实例初始化，数据和事件未绑定</li>
+<li><strong>created</strong>：数据观测和事件已绑定，DOM 未生成</li>
+<li><strong>beforeMount</strong>：模板编译完成，DOM 未挂载</li>
+<li><strong>mounted</strong>：DOM 已挂载，可操作真实 DOM</li>
+<li><strong>beforeUpdate</strong>：数据变化，DOM 更新前触发</li>
+<li><strong>updated</strong>：数据变化，DOM 已更新</li>
+<li><strong>beforeUnmount</strong>：组件销毁前触发</li>
+<li><strong>unmounted</strong>：组件已销毁</li>
+</ul>
+</details>
+
+<h2 id="Spring-知识点"><a href="#Spring-知识点" class="headerlink" title="Spring 知识点"></a>Spring 知识点</h2><details>
+<summary>Spring Bean 生命周期</summary>
+
+<ul>
+<li><strong>实例化</strong>：Spring 创建 Bean 对象</li>
+<li><strong>属性注入</strong>：注入依赖的属性或 Bean</li>
+<li><strong>初始化回调</strong>：调用 <code>@PostConstruct</code> 或 <code>InitializingBean.afterPropertiesSet</code></li>
+<li><strong>使用</strong>：Bean 可正常被应用调用</li>
+<li><strong>销毁回调</strong>：调用 <code>@PreDestroy</code> 或 <code>DisposableBean.destroy</code></li>
+</ul>
+</details>
+
+<details>
+<summary>Spring 单例 Bean 与原型 Bean 区别</summary>
+
+<ul>
+<li><strong>单例 Bean</strong>：整个 Spring 容器中只有一个实例，每次获取都是同一个对象</li>
+<li><strong>原型 Bean</strong>：每次获取都会创建新的实例</li>
+<li>生命周期：单例 Bean 容器启动时创建，原型 Bean 容器不管理销毁</li>
+</ul>
+</details>
+
+<h2 id="Java-知识点"><a href="#Java-知识点" class="headerlink" title="Java 知识点"></a>Java 知识点</h2><details>
+<summary>Java 内存模型</summary>
+
+<ul>
+<li><strong>堆（Heap）</strong>：存储对象实例，垃圾回收器管理</li>
+<li><strong>栈（Stack）</strong>：存储方法调用，局部变量和操作数</li>
+<li><strong>方法区（Method Area &#x2F; 元空间 Metaspace）</strong>：存储类信息、常量、静态变量</li>
+<li><strong>程序计数器（PC）</strong>：记录当前线程执行到哪条字节码</li>
+<li><strong>直接内存（Direct Memory）</strong>：非 JVM 堆内存，用于高性能 I&#x2F;O</li>
+<li><strong>线程共享</strong>：堆和方法区被所有线程共享，栈和 PC 寄存器是线程独有</li>
+</ul>
+</details>
+
+<details>
+<summary>Java volatile 关键字作用</summary>
+
+<ul>
+<li><strong>可见性</strong>：保证一个线程修改的变量，对其他线程立即可见</li>
+<li><strong>禁止指令重排序</strong>：编译器和 CPU 不会对 volatile 变量操作进行重排序</li>
+<li><strong>不保证原子性</strong>：++ 等复合操作不是原子性的，需要额外同步</li>
+<li>使用场景：状态标识、单例模式双重检查锁、轻量级同步</li>
+</ul>
+</details>
+
 
     </div>
     
@@ -167,6 +247,10 @@
     
     
     
+    
+    <div id="comment">
+        <div id="twikoo-container"></div>
+    </div>
     
     
 </div>
@@ -175,7 +259,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2025 - 2025 我的小屋
+            2024 - 2025 start.luck
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
@@ -203,6 +287,16 @@
     
 
 
+
+<script>
+    twikoo.init({
+        el: "#twikoo-container",
+        envId: "https://twi-jjjyhrfvu-errorlooks-projects.vercel.app",
+        region: "ap-guangzhou",
+        path: location.pathname,
+        lang: "zh-CN",
+    })
+</script>
 
 
     

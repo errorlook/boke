@@ -3,7 +3,7 @@
 <html lang="English">
 <head>
     <meta charset="utf-8" />
-    <title>我的小屋</title>
+    <title>start.luck</title>
     <meta name="author" content="zhangqi" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -61,7 +61,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/boke/">
-            <span>我的小屋</span>
+            <span>START.LUCK</span>
         </a>
         
         <a href="/boke/">
@@ -80,7 +80,7 @@
         </a>
         
         <a href="/boke/wallpaper">
-            <i class="fa-solid fa-wallpaper fa-fw"></i>
+            <i class="fa-solid fa-image fa-fw"></i>
             <span>&ensp;wallpaper</span>
         </a>
         
@@ -88,7 +88,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;我的小屋</span>
+            <span>&emsp;START.LUCK</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -123,7 +123,7 @@
                 <a href="/boke/wallpaper">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-wallpaper fa-fw"></i>
+                            <i class="fa-solid fa-image fa-fw"></i>
                         </div>
                         <div style="min-width: 100px; max-width: 150%; width: 20%">wallpaper</div>
                     </div>
@@ -142,7 +142,6 @@
     <div
         id="home-background"
         ref="homeBackground"
-        data-images="/boke/images/younuo2.jpg"
     ></div>
     <div id="home-info" @click="homeClick">
         <span class="loop"></span>
@@ -151,7 +150,7 @@
         <span class="loop"></span>
         <span class="info">
             <div class="wrap">
-                <h1>我的小屋</h1>
+                <h1>start.luck</h1>
                 <h3></h3>
                 <h5></h5>
             </div>
@@ -167,8 +166,8 @@
         
 
 <div class="post">
-    <a href="/boke/2024/09/27/hello-world/">
-        <h2 class="post-title">欢迎来到我的小窝</h2>
+    <a href="/boke/2024/05/20/1/">
+        <h2 class="post-title">欢迎来到我的博客</h2>
     </a>
     <div class="category-and-date">
         
@@ -185,7 +184,7 @@
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2024/9/27
+            2024/5/20
         </span>
         
         
@@ -212,25 +211,25 @@
         
         <span class="tag">
             
-            <a href="/boke/tags/%E6%A0%87%E7%AD%BE/" style="color: #00bcd4">标签</a>
+            <a href="/boke/tags/%E6%A0%87%E7%AD%BE/" style="color: #00a596">标签</a>
         </span>
         
     </div>
-    <a href="/boke/2024/09/27/hello-world/" class="go-post">阅读全文</a>
+    <a href="/boke/2024/05/20/1/" class="go-post">阅读全文</a>
 </div>
 
 <div class="post">
-    <a href="/boke/2025/09/27/%E6%96%B0%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/">
-        <h2 class="post-title">今日更新</h2>
+    <a href="/boke/2025/02/20/3/">
+        <h2 class="post-title">杭州之旅</h2>
     </a>
     <div class="category-and-date">
         
         <span class="category">
-            <a href="/boke/categories/%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9/">
+            <a href="/boke/categories/%E5%86%85%E5%AE%B9%E5%88%86%E4%BA%AB/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                更新内容
+                内容分享
             </a>
         </span>
         
@@ -238,7 +237,7 @@
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/9/27
+            2025/2/20
         </span>
         
         
@@ -246,7 +245,7 @@
     <div class="description">
         <div class="content" v-pre>
             
-            <p>网站内更新多处</p>
+            <p>杭州旅途</p>
 
             
         </div>
@@ -261,11 +260,60 @@
         
         <span class="tag">
             
-            <a href="/boke/tags/%E6%A0%87%E7%AD%BE/" style="color: #00a596">标签</a>
+            <a href="/boke/tags/%E6%97%85%E6%B8%B8/" style="color: #ff7d73">旅游</a>
         </span>
         
     </div>
-    <a href="/boke/2025/09/27/%E6%96%B0%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/" class="go-post">阅读全文</a>
+    <a href="/boke/2025/02/20/3/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/boke/2024/08/26/2/">
+        <h2 class="post-title">今日更新</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/boke/categories/%E6%B7%BB%E5%8A%A0%E5%A3%81%E7%BA%B8/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                添加壁纸
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/8/26
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>芙莉莲壁纸添加</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/boke/tags/%E5%A3%81%E7%BA%B8/" style="color: #00bcd4">壁纸</a>
+        </span>
+        
+    </div>
+    <a href="/boke/2024/08/26/2/" class="go-post">阅读全文</a>
 </div>
 
 
@@ -328,7 +376,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2025 - 2025 我的小屋
+            2024 - 2025 start.luck
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>

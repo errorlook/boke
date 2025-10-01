@@ -3,7 +3,7 @@
 <html lang="English">
 <head>
     <meta charset="utf-8" />
-    <title> | 我的小屋</title>
+    <title> | start.luck</title>
     <meta name="author" content="zhangqi" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -44,6 +44,8 @@
 
 
 
+<script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
+
 
 
 <link rel="stylesheet" href="/boke/css/main.css" />
@@ -63,7 +65,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/boke/">
-            <span>我的小屋</span>
+            <span>START.LUCK</span>
         </a>
         
         <a href="/boke/">
@@ -82,7 +84,7 @@
         </a>
         
         <a href="/boke/wallpaper">
-            <i class="fa-solid fa-wallpaper fa-fw"></i>
+            <i class="fa-solid fa-image fa-fw"></i>
             <span>&ensp;wallpaper</span>
         </a>
         
@@ -90,7 +92,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;我的小屋</span>
+            <span>&emsp;START.LUCK</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -125,7 +127,7 @@
                 <a href="/boke/wallpaper">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-wallpaper fa-fw"></i>
+                            <i class="fa-solid fa-image fa-fw"></i>
                         </div>
                         <div style="min-width: 100px; max-width: 150%; width: 20%">wallpaper</div>
                     </div>
@@ -149,7 +151,7 @@
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/9/30
+            2025/10/2
         </span>
         
         
@@ -166,13 +168,19 @@
   <ul style="list-style:none; padding-left:0;">
     <li>
       <!-- data-prefix 是图片路径前缀，data-count 是数量 -->
-      <span class="nav-item" data-prefix="/boke/images/younuo" data-count="2" style="cursor:pointer; color:blue;">尤诺</span>
+      <span class="nav-item" data-prefix="/boke/images/younuo" data-count="2" style="cursor:pointer; color:#6A5ACD;">尤诺</span>
     </li>
     <li>
-   <span class="nav-item" data-prefix="/boke/images/fulilian" data-count="56" style="cursor:pointer; color:blue;">葬送的芙莉莲</span>
+   <span class="nav-item" data-prefix="/boke/images/fulilian" data-count="56" style="cursor:pointer; color:#6A5ACD;">葬送的芙莉莲</span>
     </li>
     <li>
-      <span class="nav-item" data-prefix="/boke/images/qingyin" data-count="1" style="cursor:pointer; color:blue;">轻音少女</span>
+      <span class="nav-item" data-prefix="/boke/images/qingyin" data-count="1" style="cursor:pointer; color:#6A5ACD;">轻音少女</span>
+    </li>
+    <li>
+      <span class="nav-item" data-prefix="/boke/images/lvyou" data-count="4" style="cursor:pointer; color:#6A5ACD;">旅游</span>
+    </li>
+    <li>
+      <span class="nav-item" data-prefix="/boke/images/feibi" data-count="2" style="cursor:pointer; color:#6A5ACD;">菲比</span>
     </li>
   </ul>
 </details>
@@ -262,6 +270,10 @@ document.addEventListener("DOMContentLoaded", function() {
     
     
     
+    <div id="comment">
+        <div id="twikoo-container"></div>
+    </div>
+    
     
 </div>
 
@@ -269,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div id="footer-wrap">
         <div>
             &copy;
-            2025 - 2025 我的小屋
+            2024 - 2025 start.luck
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
@@ -297,6 +309,16 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
 
+
+<script>
+    twikoo.init({
+        el: "#twikoo-container",
+        envId: "https://twi-jjjyhrfvu-errorlooks-projects.vercel.app",
+        region: "ap-guangzhou",
+        path: location.pathname,
+        lang: "zh-CN",
+    })
+</script>
 
 
     

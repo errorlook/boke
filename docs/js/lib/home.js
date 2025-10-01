@@ -1,13 +1,11 @@
 mixins.home = {
     mounted() {
-        let background = this.$refs.homeBackground;
-        let images = background.dataset.images.split(",");
-        let id = Math.floor(Math.random() * images.length);
-        background.style.backgroundImage = `url('${images[id]}')`;
+        // 只保留菜单颜色设置
         this.menuColor = true;
     },
     methods: {
         homeClick() {
+            // 平滑滚动到窗口高度位置（向下滚动一屏）
             window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
         },
     },

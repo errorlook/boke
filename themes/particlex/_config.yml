@@ -4,9 +4,7 @@
 # Avatar image
 avatar: /images/1.jpg
 
-# Home page background image
-background:
-    - /images/younuo2.jpg
+
 
 # Loading image
 loading: /images/loading.gif
@@ -37,7 +35,7 @@ menu:
         theme: solid
         link: /Knowledge Base
     wallpaper:
-        name: wallpaper
+        name: image
         theme: solid
         link: /wallpaper
 
@@ -59,7 +57,7 @@ card:
 
 # Footer info
 footer:
-    since: 2025
+    since: 2024
     # Customize the server domain name ICP
     ICP:
         enable: false
@@ -150,11 +148,9 @@ waline:
     login: enable # Whether enable login, can choose from 'enable', 'disable' and 'force'
     pageSize: 10 # Comment per page
 
-# Twikoo
-# https://github.com/imaegoo/twikoo
 twikoo:
-    enable: false
-    envID:
-    region:
-    path: location.pathname
-    lang:
+  enable: true
+  envID: https://twi-jjjyhrfvu-errorlooks-projects.vercel.app  # 填项目 slug
+  region: ap-guangzhou
+  path: location.pathname
+  lang: zh-CN
